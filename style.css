@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box; /*база, которая нужна*/
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.btn {
+  line-height: 16px; /*высота строки*/
+  font-size: 14px; /*размер шрифта*/
+  font-weight: 400; /*ширина строки*/
+  /*padding: 10px 15px 10px 15px; вверх право низ лево*/
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background-color: transparent;
+}
+
+.btn-primary {
+  background-color: rgb(37, 110, 235);
+  color: rgb(255, 255, 255);
+}
+
+.header {
+  padding-top: 30px;
+  padding-bottom: 24px;
+}
+
+.header-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header-logo span {
+  line-height: 28px; /*высота строки*/
+  font-size: 24px; /*размер шрифта*/
+  font-weight: 700; /*ширина строки*/
+  margin-left: 6px; /*отступ*/
+}
+
+.header-burger {
+  width: 30px;
+  height: 15px;
+  display: none;
+}
+
+/*база*/
+@media (max-width: 1200px) {
+  .container {
+    max-width: 930px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 730px;
+  }
+}
+
+@media (max-width: 786px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .header-controls {
+    display: none;
+  }
+
+  .header-burger {
+    display: block; /*отображение бургера на маленьких устройствах*/
+  }
+}
